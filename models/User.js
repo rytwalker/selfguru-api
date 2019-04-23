@@ -10,6 +10,10 @@ class User {
     }
   }
 
+  static getUserById(id) {
+    return db('users').where({ id });
+  }
+
   static getUserByUsername(username) {
     return db('users')
       .where({ username })

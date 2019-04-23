@@ -9,6 +9,10 @@ class Message {
       return db('messages');
     }
   }
+
+  static getMessagesByUserId(id) {
+    return db('messages').where({ user_id: id });
+  }
 }
 
 module.exports = Message;

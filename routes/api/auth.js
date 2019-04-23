@@ -72,7 +72,7 @@ router.post('/login', async (req, res) => {
   } catch (err) {
     res
       .status(500)
-      .json({ error: 'There was an erro accessing the database to login' });
+      .json({ error: 'There was an error accessing the database to login' });
   }
 });
 
