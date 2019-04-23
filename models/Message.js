@@ -13,6 +13,10 @@ class Message {
   static getMessagesByUserId(id) {
     return db('messages').where({ user_id: id });
   }
+
+  save() {
+    return db('messages').insert(this.message, 'title');
+  }
 }
 
 module.exports = Message;
