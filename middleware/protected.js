@@ -1,7 +1,7 @@
 require('dotenv').config();
 const jwt = require('jsonwebtoken');
 
-function protected(req, res, nex) {
+function protected(req, res, next) {
   const token = req.headers.authentication;
   if (token) {
     jwt.verify(token, process.env.JWT_SECRET, (err, decodedToken) => {
@@ -16,3 +16,5 @@ function protected(req, res, nex) {
     res.status(401).json({ message: 'No token provided' });
   }
 }
+
+module.exports = protected;

@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const protected = require('../../middleware/protected');
 const User = require('../../models/User');
 const Message = require('../../models/Message');
 
@@ -17,7 +18,7 @@ router.get('/', async (req, res) => {
 });
 
 // get user by id and messages associated with
-router.get('/:id', async (req, res) => {
+router.get('/:id', protected, async (req, res) => {
   const id = req.params.id;
   try {
     const [user] = await User.getUserById(id);
