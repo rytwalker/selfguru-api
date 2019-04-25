@@ -9,10 +9,9 @@
    1. [x] GET all messages
    2. GET single message
    3. [x] GET all messages by user
-   4. GET single message by user
-   5. POST new message by user (connect with twilio api)
-   6. PUT message by user (connect with twilio api)
-   7. DELETE message by user (connect with twilio api)
+   4. [x] POST new message by user (connect with twilio api)
+   5. PUT message by user (connect with twilio api)
+   6. DELETE message by user (connect with twilio api)
 3. Users
    1. [x] GET all users (super user)
    2. [x] GET single user
